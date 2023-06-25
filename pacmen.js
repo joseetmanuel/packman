@@ -15,15 +15,17 @@ function setToRandom(scale) {
 // Factory to make a PacMan
 function makePac() {
   // returns an object with values scaled {x: 33, y: 21}
-  let velocity = setToRandom(10);
+  let velocity = setToRandom(50);
   let position = setToRandom(200);
   // Add image to div id = game
   let game = document.getElementById("game");
   let newimg = document.createElement("img");
   newimg.style.position = "absolute";
-  newimg.src = "./PacMan" +setToRandom(3).x+".png";
+  newimg.bit = true
+  newimg.src = "./PacMan1.png"
   newimg.width = 100;
   newimg.style.left = position.x;
+
   newimg.style.top = position.y;
   game.appendChild(newimg);
   // new style of creating an object
@@ -44,10 +46,12 @@ function update() {
     item.newimg.style.left = item.position.x;
     item.newimg.style.top = item.position.y;
   });
-  setTimeout(update, 20);
+  setTimeout(update, 200);
+
 }
 
 function checkCollisions(item) {
+
   if (
     item.position.x + item.velocity.x + item.newimg.width > window.innerWidth ||
     item.position.x + item.velocity.x < 0
@@ -59,6 +63,13 @@ function checkCollisions(item) {
     item.position.y + item.velocity.y < 0
   )
     item.velocity.y = -item.velocity.y;
+
+    if (item.velocity.x <0)
+      item.newimg.bit ? item.newimg.src = "./PacMan3.png": item.newimg.src = "./PacMan4.png";
+    else
+      item.newimg.bit ? item.newimg.src = "./PacMan1.png": item.newimg.src = "./PacMan2.png";
+      
+    item.newimg.bit = !item.newimg.bit
 }
 
 function makeOne() {
