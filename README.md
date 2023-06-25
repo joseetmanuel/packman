@@ -2,11 +2,11 @@
 
 ## Description of the project: ##
 
-Ejercicio para chocar con "paredes" una imagen
+Ejercicio para chocar con "paredes" una imagen "packman" en realidad son 4 imagenes que van cambiando de acuerdo a la dirección del movimiento, cuando se detecta que choca cambia la dirección del movimiento y la imagen
 
 ## How to Run: ##
 
-Solo descargar y correr index.html
+Solo descargar y correr index.html (se puede abrir directamente desde el explorador)
 
 ## Roadmap of future improvements: ##
 La funcion de que packman cambie de lugar y movimiento
