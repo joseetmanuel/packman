@@ -1,7 +1,7 @@
 var pos = 0;
 const pacArray = [
-  ["./PacMan1.png", "./PacMan2.png"],
-  ["./PacMan3.png", "./PacMan4.png"],
+  ["./images/PacMan1.png", "./images/PacMan2.png"],
+  ["./images/PacMan3.png", "./images/PacMan4.png"],
 ];
 var direction = 0;
 const pacMen = [];
@@ -22,7 +22,7 @@ function makePac() {
   let newimg = document.createElement("img");
   newimg.style.position = "absolute";
   newimg.bit = true
-  newimg.src = "./PacMan1.png"
+  newimg.src = "./images/PacMan1.png"
   newimg.width = 100;
   newimg.style.left = position.x;
 
@@ -65,9 +65,9 @@ function checkCollisions(item) {
     item.velocity.y = -item.velocity.y;
 
     if (item.velocity.x <0)
-      item.newimg.bit ? item.newimg.src = "./PacMan3.png": item.newimg.src = "./PacMan4.png";
+      item.newimg.bit ? item.newimg.src = "./images/PacMan3.png": item.newimg.src = "./images/PacMan4.png";
     else
-      item.newimg.bit ? item.newimg.src = "./PacMan1.png": item.newimg.src = "./PacMan2.png";
+      item.newimg.bit ? item.newimg.src = "./images/PacMan1.png": item.newimg.src = "./images/PacMan2.png";
       
     item.newimg.bit = !item.newimg.bit
 }
